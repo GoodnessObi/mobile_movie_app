@@ -1,0 +1,13 @@
+node_modules/
+.expo/
+dist/
+build/
+*.log
+.env*
+coverage/
+.nyc_output/
+*.tgz
+*.tar.gz
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
