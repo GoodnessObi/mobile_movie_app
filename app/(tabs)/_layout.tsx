@@ -1,4 +1,5 @@
 import FontAwesome from '@expo/vector-icons/FontAwesome';
+import Ionicons from '@expo/vector-icons/Ionicons';
 import { Tabs } from 'expo-router';
 import React from 'react';
 
@@ -27,8 +28,12 @@ const _Layout = () => {
         options={{
           headerShown: false,
           title: 'Home',
-          tabBarIcon: ({ color }) => (
-            <FontAwesome size={20} name="home" color={color} />
+          tabBarIcon: ({ color, focused }) => (
+            <Ionicons
+              size={20}
+              name={focused ? 'home' : 'home-outline'}
+              color={color}
+            />
           ),
         }}
       />
@@ -37,8 +42,12 @@ const _Layout = () => {
         options={{
           headerShown: false,
           title: 'Search',
-          tabBarIcon: ({ color }) => (
-            <FontAwesome size={20} name="search" color={color} />
+          tabBarIcon: ({ color, focused }) => (
+            <Ionicons
+              size={20}
+              name={focused ? 'search' : 'search-outline'}
+              color={color}
+            />
           ),
         }}
       />
@@ -47,8 +56,12 @@ const _Layout = () => {
         options={{
           headerShown: false,
           title: 'Saved',
-          tabBarIcon: ({ color }) => (
-            <FontAwesome size={20} name="bookmark" color={color} />
+          tabBarIcon: ({ color, focused }) => (
+            <Ionicons
+              size={20}
+              name={focused ? 'bookmark' : 'bookmark-outline'}
+              color={color}
+            />
           ),
         }}
       />
@@ -57,8 +70,12 @@ const _Layout = () => {
         options={{
           headerShown: false,
           title: 'Profile',
-          tabBarIcon: ({ color }) => (
-            <FontAwesome size={20} name="user" color={color} />
+          tabBarIcon: ({ color, focused }) => (
+            <FontAwesome
+              size={20}
+              name={focused ? 'user' : 'user-o'}
+              color={color}
+            />
           ),
         }}
       />
